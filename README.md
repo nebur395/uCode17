@@ -1,6 +1,44 @@
 # uCode17
 
-# EditorConfig 
+## Start using this App ##
+ Assuming you have JDK 8 already installed, follow this instructions:
+
+1. Install Scala in your system (you will need it to run the App) from [here](http://www.scala-lang.org/download). And don't forget to set up the enviroment variables as it's shown [here](http://www.scala-lang.org/download/install.html).
+2. Install Scalatra following the instructions given in the [official webpage](http://scalatra.org/getting-started/installation.html).
+3. Clone this repository:
+```sh
+$ git clone https://github.com/UNIZAR-30226-2016-02/cloudrobe
+```
+
+## Build & Run ##
+SBT is the tool used to build and run this Scala project. It is a common way to run when developing an Scala application, it will manage all your dependencies and will run the JVM needed to start the Scala aplication.
+When you type `./sbt` an interpreter will open where you will type `jetty:start` in order to run this app.
+To sum up:
+
+```sh
+$ cd cloudrobe
+$ ./sbt
+> jetty:start
+```
+
+Then access [http://localhost:8080/](http://localhost:8080/) in your browser.
+
+## Test ##
+SBT allows you to run the tests defined on *src/test*:
+
+```sh
+$ git clone https://github.com/UNIZAR-30226-2016-02/cloudrobe
+$ cd cloudrobe
+$ ./sbt
+> test
+```
+
+## Other commands ##
+`>clean` allows you to remove the content in the target folder which will cause
+SBT to check the dependencies again. If any dependency is not updated, it will
+automatically download the correct version.
+
+## EditorConfig
 [EditorConfig](http://editorconfig.org/) helps developers maintain consistent coding styles between different editors and IDEs. It is a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles.
 You need to create a .editorconfig file in which you define the coding style rules. It is similar to the format accepted by gitignore.
 
