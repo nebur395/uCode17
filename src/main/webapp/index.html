@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--<link rel="shortcut icon" type="image/x-icon" href="favicons/iconLogo.ico" />-->
+  <title>Site Name</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap imports -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- w3.css stylesheets -->
+  <link rel="stylesheet" href="libraries/w3.css" />
+  <link rel="stylesheet" href="libraries/w3-colors-food.css" />
+
+  <!-- Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet" />
+
+  <!--load the favicons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- AngularJS imports -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+  <!-- css own imports -->
+  <link rel="stylesheet" href="css/generalStyle.css" />
+  <link rel="stylesheet" href="css/slideshowStyle.css" />
+  <link rel="stylesheet" href="css/navbarStyle.css" />
+  <link rel="stylesheet" href="css/bandStyle.css" />
+  <link rel="stylesheet" href="css/concertsStyle.css" />
+
+  <!-- OWN SCRIPTS -->
+  <!-- directives -->
+  <script src="javascript/directives.js"></script>
+  <!-- controllers -->
+  <script src="javascript/controllers/slideshowController.js"></script>
+  <script src="javascript/controllers/musicController.js"></script>
+  <script src="javascript/controllers/navbarController.js"></script>
+  <script src="javascript/controllers/concertsController.js"></script>
+  <script src="javascript/controllers/bandController.js"></script>
+</head>
+
+<body ng-app="machinLenin">
+
+<!-- the content here will be the 'body page' and it will change dependending of the current state -->
+<ui-view></ui-view>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <custom-slideshow></custom-slideshow>
+
+  <!-- The Band Section -->
+  <band></band>
+
+  <!-- The Concerts Section -->
+  <concerts></concerts>
+
+  <!-- The Music Section -->
+  <music></music>
+
+  <!-- End Page Content -->
+</div>
+
+<div id="toTopButton">
+  <a href="#onirianHome" class="w3-btn-floating-large w3-blue-grey disappear"><i class="fa fa-arrow-up"></i></a>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge" id="onirianContact">
+  <p>
+    <img src="images/logoNegro.png" alt="onirianLogo" style="max-height: 24px;margin-right: 25px">
+    <a href="https://www.facebook.com/Onirianzgz" target="_blank">
+      <i class="fa fa-facebook-official w3-hover-text-indigo"></i></a>
+
+    <a href="https://www.youtube.com/user/OnirianOfficial" target="_blank">
+      <i class="fa fa-youtube w3-hover-text-red"></i></a>
+
+    <a href="https://twitter.com/Onirian" target="_blank">
+      <i class="fa fa-twitter w3-hover-text-light-blue"></i></a>
+    onirian.mail@gmail.com
+  </p>
+
+  <p class="w3-small">© 2017
+    <a href="https://github.com/nebur395" target="_blank" class="w3-text-indigo w3-hover-text-light-blue"> Rubén Moreno
+      <i class="fa fa-github"></i></a>
+    | Powered by
+    <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+       class="w3-text-indigo w3-hover-text-light-blue"> w3.css</a></p>
+</footer>
+</body>
+</html>
