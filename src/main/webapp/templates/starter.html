@@ -1,10 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div id="starterStyle">
+  <div class="container-fluid">
+
+    <div class="initGap"></div>
+
+    <!-- load & filter section -->
+    <div class="col-sm-6" style="padding:2%">
+      <!-- load section -->
+      <div class="col-xs-12">
+        <div class="mL-card">
+          <p>hola</p>
+        </div>
+      </div><!-- END: load section -->
+
+      <!-- filters section -->
+      <div class="col-xs-12 mL-card">
+
+        <p class="text-center">Diviértete mezclando filtros</p>
+
+        <div id="filters" class="w3-theme-l4">
+          <div class="row">
+
+            <div class="checkbox col-md-4 col-xs-6" style="margin:0">
+              <label><input type="checkbox" ng-model="whiteBlack">Blanco y negro</label>
+            </div>
+            <div class="checkbox col-md-4 col-xs-6" style="margin:0">
+              <label><input type="checkbox" ng-model="sepia">Sepia</label>
+            </div>
+            <div class="checkbox col-md-4 col-xs-6" style="margin:0">
+              <label class="customDisabled"><input type="checkbox" ng-model="vignette" disabled>Viñeta*</label>
+            </div>
+            <div class="checkbox col-md-4 col-xs-6" style="margin:0">
+              <label><input type="checkbox" ng-model="jazzy">Llamativo</label>
+            </div>
+
+          </div>
+        </div>
+
+        <p id="filtersFooter">
+          <span style="float:left">Acerca de nuestros <a href="" class="w3-link">filtros</a></span>
+          <span style="float:right">*Solo para versión <a href="" class="w3-link">PRO</a></span>
+        </p>
+
+      </div><!-- END: filters section -->
+
+    </div><!-- END: load & filter section -->
+
+    <!-- variable section -->
+    <div class="col-sm-6" style="padding:5%">
+
+        <div class="mL-card">
+          <p>hola</p>
+        </div>
+
+    </div><!-- END: variable section -->
+  </div>
+</div>

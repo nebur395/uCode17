@@ -3,7 +3,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #efefef;
+  background-color: #ebebeb;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -26,6 +26,14 @@ h1 {
   margin-right: auto;
 }
 
+/* add a gap */
+.initGap {
+  display: block;
+  content: " ";
+  height: 100px;
+  visibility: hidden;
+}
+
 /* Add a dark background color to the footer */
 footer {
   background-color: #2d2d30;
@@ -45,4 +53,10 @@ footer a {
 footer a:hover {
   color: #777;
   text-decoration: none;
+}
+
+.customDisabled {
+  text-decoration: line-through;
+  cursor: not-allowed !important;
+  color: #808080;
 }
