@@ -5,12 +5,19 @@
 
 
     <div ng-if="firstView">
-      <button class="w3-btn w3-tag w3-theme-action" style="font-weight: 700" ng-click="startProcess()">
-        Procesar vídeo</button>
+
+      <div id="outer">
+        <div id="customContainer">
+          <button class="w3-btn w3-tag w3-theme-action" id="processButton" ng-click="startProcess()">
+            Procesar vídeo</button>
+
+        </div>
+      </div>
+
     </div>
 
     <div ng-if="secondView">
-      <p>Por favor, espera mientras procesamos el vídeo...</p>
+      <p class="text-center">Por favor, espera mientras procesamos el vídeo...</p>
       <div class="loader"></div>
     </div>
 
