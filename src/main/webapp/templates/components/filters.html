@@ -1,0 +1,34 @@
+<div id="filtersStyle">
+
+  <p style="text-align:center">
+    <label class="radio-inline"><input type="radio" ng-model="filter" value="color">
+      Resaltar rojo</label>
+    <label class="radio-inline"><input type="radio" ng-model="filter" value="border">
+      Detección de bordes</label>
+    <label class="radio-inline"><input type="radio" ng-model="filter" value="face">
+      Detección de caras</label>
+    <label class="radio-inline"><input type="radio" ng-model="filter" value="art">
+      Estilo artístico</label>
+  </p>
+
+  <div ng-switch="filter">
+
+    <div  ng-switch-when="color">
+      <img class="img-responsive" src="../../images/fColor.png" />
+    </div>
+
+    <div  ng-switch-when="border">
+      <img class="img-responsive" src="../../images/fBorder.jpeg" />
+    </div>
+
+    <div  ng-switch-when="face">
+      <img class="img-responsive" src="../../images/fFace.jpg" />
+    </div>
+
+    <div  ng-switch-when="art">
+      <img class="img-responsive" src="../../images/fArt.jpeg" />
+    </div>
+
+  </div>
+
+</div>

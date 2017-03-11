@@ -21,9 +21,11 @@
     <div ng-if="thirdView" class="text-center">
 
       <ul class="nav nav-tabs" style="font-size: 110%">
-        <li class="active" style="margin-left: 30%"><a data-toggle="tab" href="#description">Análisis</a></li>
+        <li class="active"><a data-toggle="tab" href="#description">Análisis</a></li>
         <li><a data-toggle="tab" href="#filters">Filtros</a></li>
         <li><a data-toggle="tab" href="#learning">Aprendizaje</a></li>
+        <li><a data-toggle="tab" href="#segmentation">Segmentación</a></li>
+        <li><a data-toggle="tab" href="#search">Búsqueda</a></li>
       </ul>
 
 
@@ -38,6 +40,14 @@
         </div>
         <div id="learning" class="tab-pane fade">
           <h3>Averigua el estilo del vídeo</h3>
+          <learning></learning>
+        </div>
+        <div id="segmentation" class="tab-pane fade">
+          <h3>Visualiza la segmentación semántica del vídeo</h3>
+          <learning></learning>
+        </div>
+        <div id="search" class="tab-pane fade">
+          <h3>Búsca por metadatos</h3>
           <learning></learning>
         </div>
       </div>
