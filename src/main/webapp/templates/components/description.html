@@ -1,5 +1,9 @@
 <div id="descriptionStyle">
   <p class="text-center">Los contenidos principales del vídeo son: {{characteristic_1}}, {{characteristic_2}} y {{characteristic_3}}. </p>
+
+  <a ng-click="plusSlides(-1)" class="previous">&laquo; Anterior</a>
+  <a ng-click="plusSlides(1)" class="next">Siguiente &raquo;</a>
+
   <!-- photo section -->
   <div class="col-sm-6">
     <img class="img-responsive" src="../../images/analytics1.png" style="margin: auto;"/>
@@ -13,113 +17,113 @@
         <tr>
           <td><i class="fa fa-battery-quarter w3-blue w3-padding-tiny"></i></td>
           <td>Rango de edad:</td>
-          <td><i>{{analytics[0].persons[0].age.min}} - {{analytics[0].persons[0].age.max}}</i></td>
+          <td><i>{{analytics[index].persons[0].age.min}} - {{analytics[index].persons[0].age.max}}</i></td>
         </tr>
         <tr>
           <td></td>
           <td>Fiabilidad:</td>
-          <td><i>{{analytics[0].persons[0].age.score}}</i></td>
+          <td><i>{{analytics[index].persons[0].age.score}}</i></td>
         </tr>
 
         <tr>
           <td><i class="fa fa-user-o w3-green w3-padding-tiny"></i></td>
           <td>Expresión facial:</td>
-          <td><i>{{analytics[0].persons[0].face}}</i></td>
+          <td><i>{{analytics[index].persons[0].face}}</i></td>
         </tr>
         <tr>
           <td><i class="fa fa-transgender w3-red w3-padding-tiny"></i></td>
           <td>Género:</td>
-          <td><i>{{analytics[0].persons[0].gender.gender}}</i></td>
+          <td><i>{{analytics[index].persons[0].gender.gender}}</i></td>
         </tr>
         <tr>
           <td></td>
           <td>Fiabilidad:</td>
-          <td><i>{{analytics[0].persons[0].gender.score}}</i></td>
+          <td><i>{{analytics[index].persons[0].gender.score}}</i></td>
         </tr>
 
 
         <tr>
           <td><i class="fa fa-battery-quarter w3-blue w3-padding-tiny"></i></td>
           <td>Rango de edad:</td>
-          <td><i>{{analytics[0].persons[1].age.min}} - {{analytics[0].persons[1].age.max}}</i></td>
+          <td><i>{{analytics[index].persons[1].age.min}} - {{analytics[index].persons[1].age.max}}</i></td>
         </tr>
         <tr>
           <td></td>
           <td>Fiabilidad:</td>
-          <td><i>{{analytics[0].persons[1].age.score}}</i></td>
+          <td><i>{{analytics[index].persons[1].age.score}}</i></td>
         </tr>
 
         <tr>
           <td><i class="fa fa-user-o w3-green w3-padding-tiny"></i></td>
           <td>Expresión facial:</td>
-          <td><i>{{analytics[0].persons[01].face}}</i></td>
+          <td><i>{{analytics[index].persons[01].face}}</i></td>
         </tr>
         <tr>
           <td><i class="fa fa-transgender w3-red w3-padding-tiny"></i></td>
           <td>Género:</td>
-          <td><i>{{analytics[0].persons[1].gender.gender}}</i></td>
+          <td><i>{{analytics[index].persons[1].gender.gender}}</i></td>
         </tr>
         <tr>
           <td></td>
           <td>Fiabilidad:</td>
-          <td><i>{{analytics[0].persons[1].gender.score}}</i></td>
+          <td><i>{{analytics[index].persons[1].gender.score}}</i></td>
         </tr>
 
         <tr>
           <td><i class="fa fa-battery-quarter w3-blue w3-padding-tiny"></i></td>
           <td>Rango de edad:</td>
-          <td><i>{{analytics[0].persons[2].age.min}} - {{analytics[0].persons[2].age.max}}</i></td>
+          <td><i>{{analytics[index].persons[2].age.min}} - {{analytics[index].persons[2].age.max}}</i></td>
         </tr>
         <tr>
           <td></td>
           <td>Fiabilidad:</td>
-          <td><i>{{analytics[0].persons[2].age.score}}</i></td>
+          <td><i>{{analytics[index].persons[2].age.score}}</i></td>
         </tr>
 
         <tr>
           <td><i class="fa fa-user-o w3-green w3-padding-tiny"></i></td>
           <td>Expresión facial:</td>
-          <td><i>{{analytics[0].persons[2].face}}</i></td>
+          <td><i>{{analytics[index].persons[2].face}}</i></td>
         </tr>
         <tr>
           <td><i class="fa fa-transgender w3-red w3-padding-tiny"></i></td>
           <td>Género:</td>
-          <td><i>{{analytics[0].persons[2].gender.gender}}</i></td>
+          <td><i>{{analytics[index].persons[2].gender.gender}}</i></td>
         </tr>
         <tr>
           <td></td>
           <td>Fiabilidad:</td>
-          <td><i>{{analytics[0].persons[2].gender.score}}</i></td>
+          <td><i>{{analytics[index].persons[2].gender.score}}</i></td>
         </tr>
 
         <tr>
           <td><i class="fa fa-battery-quarter w3-blue w3-padding-tiny"></i></td>
           <td>Rango de edad:</td>
-          <td><i>{{analytics[0].persons[3].age.min}} - {{analytics[0].persons[3].age.max}}</i></td>
+          <td><i>{{analytics[index].persons[3].age.min}} - {{analytics[index].persons[3].age.max}}</i></td>
         </tr>
         <tr>
           <td></td>
           <td>Fiabilidad:</td>
-          <td><i>{{analytics[0].persons[3].age.score}}</i></td>
+          <td><i>{{analytics[index].persons[3].age.score}}</i></td>
         </tr>
 
         <tr>
           <td><i class="fa fa-user-o w3-green w3-padding-tiny"></i></td>
           <td>Expresión facial:</td>
-          <td><i>{{analytics[0].persons[3].face}}</i></td>
+          <td><i>{{analytics[index].persons[3].face}}</i></td>
         </tr>
         <tr>
           <td><i class="fa fa-transgender w3-red w3-padding-tiny"></i></td>
           <td>Género:</td>
-          <td><i>{{analytics[0].persons[3].gender.gender}}</i></td>
+          <td><i>{{analytics[index].persons[3].gender.gender}}</i></td>
         </tr>
         <tr>
           <td></td>
           <td>Fiabilidad:</td>
-          <td><i>{{analytics[0].persons[3].gender.score}}</i></td>
+          <td><i>{{analytics[index].persons[3].gender.score}}</i></td>
         </tr>
 
-        <tr ng-repeat="thing in analytics[0].things">
+        <tr ng-repeat="thing in analytics[index].things">
           <td></td>
           <td>{{thing.type}}</td>
           <td><i>{{thing.score}}</i></td>

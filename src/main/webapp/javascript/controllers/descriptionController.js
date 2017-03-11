@@ -4,6 +4,8 @@ angular.module('machinLenin')
         $scope.characteristic_1 = "";
         $scope.characteristic_2 = "";
         $scope.characteristic_3 = "";
+        $scope.index = 0;
+
         $scope.getTheme = function(){
             var jsonArray = $scope.analytics;
             var thingsArray = [];
@@ -93,4 +95,8 @@ angular.module('machinLenin')
             }
         ];
         $scope.getTheme();
+
+        $scope.plusSlides = function (n) {
+           $scope.index = (slideIndex + n)%3;
+        };
     }]);
