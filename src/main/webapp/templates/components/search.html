@@ -1,10 +1,16 @@
 <div id="searchStyle">
 
   <!-- frame filter -->
-  <div class="form-group row">
-    <input id="nameExerciseFilter" type="text" ng-model="frameFilter"
-           class="form-control" placeholder='Busca un frame específico (p.ej., "Con gorro")' />
+  <div class="row">
+    <div class="col-xs-10">
+      <input id="nameExerciseFilter" type="text" ng-model="frameFilter"
+             class="form-control" placeholder='Busca un frame específico (p.ej., "Con gorro")' />
+    </div>
+    <div class="col-xs-2">
+      <button ng-click="submit" class="w3-btn w3-tag w3-theme-action" id="filterButton">Buscar</button>
+    </div>
   </div>
+
 
   <div class="divider"></div>
 
