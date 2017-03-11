@@ -79,32 +79,32 @@ angular.module('machinLenin')
             {
                 for (var k in arrayJson[i]){
                     if(k=='persons'){
-                        for(var p = 0; p < arrayJson[i].personas.length; p++){
-                            for(var ps in arrayJson[i].personas[p]){
+                        for(var p = 0; p < arrayJson[i].persons.length; p++){
+                            for(var ps in arrayJson[i].persons[p]){
                                 if(ps == 'age'){
-                                    if(arrayJson[i].personas[p].age.max == searchValue){
+                                    if(arrayJson[i].persons[p].age.max == searchValue){
                                         $scope.result = arrayJson[i];
                                         $scope.imgName = $scope.imgName + i;
-                                    }else if(arrayJson[i].personas[p].age.min == searchValue){
+                                    }else if(arrayJson[i].persons[p].age.min == searchValue){
                                         $scope.result = arrayJson[i];
                                         $scope.imgName = $scope.imgName + i;
-                                    }else if(arrayJson[i].personas[p].age.score == searchValue){
+                                    }else if(arrayJson[i].persons[p].age.score == searchValue){
                                         $scope.result = arrayJson[i];
                                         $scope.imgName = $scope.imgName + i;
                                     }
                                 }
                                 else if(ps == 'face'){
-                                    if(arrayJson[i].personas[p].face_connotation == searchValue){
+                                    if(arrayJson[i].persons[p].face == searchValue){
                                         $scope.result = arrayJson[i];
                                         $scope.imgName = $scope.imgName + i;
                                     }
                                 }
                                 else if(ps == 'gender'){
-                                    if(arrayJson[i].personas[p].gender.gender == searchValue){
+                                    if(arrayJson[i].persons[p].gender.gender == searchValue){
                                         $scope.result = arrayJson[i];
                                         $scope.imgName = $scope.imgName + i;
                                     }
-                                    else if(arrayJson[i].personas[p].gender.score == searchValue){
+                                    else if(arrayJson[i].persons[p].gender.score == searchValue){
                                         $scope.result = arrayJson[i];
                                         $scope.imgName = $scope.imgName + i;
                                     }
