@@ -5,13 +5,12 @@ angular.module('machinLenin')
 
         return {
             // add a exercise to the list of performed exercises
-            sendFilters: function (filters, callback) {
+            sendFilters: function (callback) {
                 $http({
                     method: 'POST',
-                    url: 'videoFilters',
-                    data: JSON.stringify(filters),
+                    url: 'processVideo',
                     headers: {
-                        'Content-Type': 'multipart/form-data; charset=UTF-8'
+                        'Content-Type': 'application/json; charset=UTF-8'
                     }
                 }).success(function (data) {
                     callback(data);

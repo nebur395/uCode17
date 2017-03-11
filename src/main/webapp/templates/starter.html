@@ -1,5 +1,22 @@
 <div id="starterStyle">
   <div class="container-fluid">
 
+    <div class="initGap"></div>
+
+
+    <div ng-if="firstView">
+      <button class="w3-btn w3-tag w3-theme-action" style="font-weight: 700" ng-click="processVideo()">
+        Procesar vídeo</button>
+    </div>
+
+    <div ng-if="secondView">
+      <p>Por favor, espera mientras procesamos el vídeo...</p>
+      <div class="loader"></div>
+    </div>
+
+    <div ng-if="thirdView">
+      <h1>procesado</h1>
+    </div>
+
   </div>
 </div>
