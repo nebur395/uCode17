@@ -12,3 +12,9 @@
 #starterStyle #filtersFooter {
   margin-top: 3%;
 }
+
+#starterStyle #sendFilters {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-weight: 700;
+}

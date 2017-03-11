@@ -1,39 +1,21 @@
 angular.module('machinLenin')
 
-    // 'exerciseService' service manage the exercise home functions of the page with the server
-    .factory('exerciseService', function ($state, $http) {
+    // 'videoFilter' service manage the exercise video filter functions of the page with the server
+    .factory('videoFilter', function ($state, $http) {
 
         return {
-            //get the predetermined exercises and predetermined muscle groups
-            getPredetermined: function (callbackSuccess,callbackError) {
-                $http({
-                    method: 'GET',
-                    url: 'getPredetermined'
-                }).success(function (data) {
-                    callbackSuccess(data.muscleGroups,data.predeterminedExercises, data.cardioTypes, data.cardioExercises);
-                }).error(function (data) {
-                    callbackError(data);
-                });
-            },
             // add a exercise to the list of performed exercises
-            addExercise: function (exercise,callbackSuccess,callbackError) {
-                var exerciseTemp = {
-                    user: auth.getUsername(),
-                    id: exercise.id,
-                    name: exercise.name,
-                    muscleGroup: exercise.muscleGroup
-                };
+            sendFilters: function (callback) {
                 $http({
                     method: 'POST',
-                    url: 'addExercise',
-                    data: JSON.stringify(exerciseTemp),
+                    url: 'videoFilters',
+                    data: JSON.stringify(filters),
                     headers: {
                         'Content-Type': 'application/json; charset=UTF-8'
                     }
                 }).success(function (data) {
-                    callbackSuccess(data);
+                    callback(data);
                 }).error(function (data) {
-                    callbackError(data);
                 });
             }
         };
