@@ -7,33 +7,37 @@ import org.json4s.jackson.JsonMethods._
 import org.json4s.JsonAST._
 import org.json4s._
 import org.scalatra.json._
-import org.scalatra.servlet.{FileUploadSupport, MultipartConfig, SizeConstraintExceededException}
+import org.scalatra.servlet.{FileUploadSupport, FileItem, MultipartConfig, SizeConstraintExceededException}
+import sys.process._
+import java.io.File
+
+
 
 class VideoServlet
 extends MlStack
-with JacksonJsonSupport
-with FileUploadSupport{
+with JacksonJsonSupport{
 
     protected implicit val jsonFormats: Formats = DefaultFormats
 
-    def jsonHeaders = Map[String,String]("Content-Type" -> "application/json")
-    def headers = Map[String,String]("Content-Type" -> "text/plain")
     def logger = Logger[VideoServlet]
     val INTERNAL_ERROR_MESSAGE = "Oops so awkward, something went wrong"
+    val VIDEO_PATH="videos/"
     val FILE_SIZE = 1024*1024*1024;
 
-    configureMultipartHandling(MultipartConfig(maxFileSize = Some(FILE_SIZE)))
+    //val FILTERS = Array("gotham", "lomo", "nashville")
 
-    post("/apply"){
-        fileParams.get("file") match {
-            case Some(file) =>
-                Ok(file.get(), Map(
-                 "Content-Type"        -> (file.contentType.getOrElse("application/octet-stream")),
-                 "Content-Disposition" -> ("attachment; filename=\"" + file.name + "\"")
-                ))
-
-            case None =>
-                BadRequest("Bad")
-         }
+    /** GET METHOD RETURNS A VIDEO */
+    get("/filter/:name"){
+        params("name") match {
+            case videoName:String => {
+                contentType = "video/x-msvideo"
+                val full_name = videoName+".avi"
+                Ok(new File(VIDEO_PATH+full_name),  Map(
+                    "Content-Disposition" -> ("attachment; filename=\"" + full_name + "\"")))
+            }
+            case null => {
+                NotFound("No se ha encontrado el fichero")
+            }
+        }
     }
 }
