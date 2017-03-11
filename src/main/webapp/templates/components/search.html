@@ -1,0 +1,18 @@
+<div id="searchStyle">
+
+  <!-- frame filter -->
+  <div class="form-group row">
+    <input id="nameExerciseFilter" type="text" ng-model="frameFilter"
+           class="form-control" placeholder='Busca un frame específico (p.ej., "Con gorro")' />
+  </div>
+
+  <div class="divider"></div>
+
+  <p ng-if="!success">Lo sentimos, no se ha encontrado ningún resultado :(</p>
+
+
+  <div ng-if="success">
+    <img class="img-responsive" ng-src="{{'../../images/' + $parent.imgName}}"/>
+  </div>
+
+</div>
