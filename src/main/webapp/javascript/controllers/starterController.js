@@ -1,6 +1,11 @@
 angular.module('machinLenin')
 
     .controller('starterCtrl', ['$scope', '$state', 'videoFilter', function ($scope, $state, videoFilter) {
+        // DRAG & DROP SECTION
+        $scope.$on('$dropletReady', function whenDropletReady() {
+            $scope.interface.allowedExtensions(['png', 'mov']);
+        });
+
         // VIDEO FILTERS
         $scope.jazzy = false;
         $scope.vignette = false;
