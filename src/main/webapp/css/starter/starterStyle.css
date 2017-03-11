@@ -12,8 +12,7 @@
   font-weight: 700;
   padding: 5% 10%;
   font-size: 150%;
-  position: absolute;
-  top: 50%;
+  margin: auto;
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {

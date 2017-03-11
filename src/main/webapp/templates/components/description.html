@@ -1,0 +1,50 @@
+<div id="descriptionStyle">
+  <!-- photo section -->
+  <div class="col-sm-6">
+    <img class="img-responsive" src="../../images/analytics1.png" />
+  </div><!-- END: photo section -->
+
+  <!-- analytics section -->
+  <div class="col-sm-6">
+    <div class="w3-twothird">
+      <table class="w3-table w3-striped w3-white">
+        <div ng-repeat="person in analytics1.persons">
+          <tr>
+            <td><i class="fa fa-battery-quarter w3-blue w3-padding-tiny"></i></td>
+            <td>Rango de edad:</td>
+            <td><i>{{person.age.min}} - {{person.age.max}}</i></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Fiabilidad:</td>
+            <td><i>{{person.age.score}}</i></td>
+          </tr>
+
+          <tr>
+            <td><i class="fa fa-user-o w3-green w3-padding-tiny"></i></td>
+            <td>Expresión facial:</td>
+            <td><i>{{person.face}}</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-transgender w3-red w3-padding-tiny"></i></td>
+            <td>Género:</td>
+            <td><i>{{person.gender.gender}}</i></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Fiabilidad:</td>
+            <td><i>{{person.gender.score}}</i></td>
+          </tr>
+        </div>
+
+
+          <tr ng-repeat="thing in analytics1.things">
+            <td>{{thing.type}}</td>
+            <td><i>{{thing.type}}</i></td>
+          </tr>
+
+
+      </table>
+    </div>
+  </div><!-- END: analytics section -->
+</div>
