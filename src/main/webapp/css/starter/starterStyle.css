@@ -31,9 +31,26 @@
 
 .nav-tabs>li>a {
   color: #9aae04;
-  width: 20%;
   border: 1px solid transparent;
 }
+
+.nav-tabs>li {
+  width: 20%;
+}
+
+#activeToggleable {
+  margin-left: 10%
+}
+
+@media only screen and (max-width: 767px){
+  #activeToggleable {
+    margin-left: 0;
+  }
+  .nav-tabs>li {
+    width: 25%;
+  }
+}
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
