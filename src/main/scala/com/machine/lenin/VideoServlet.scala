@@ -41,4 +41,8 @@ with JacksonJsonSupport{
             }
         }
     }
+    post("/processVideo"){
+        Thread.sleep(5000)
+        Ok("Su video ha sido procesado")
+    }
 }
