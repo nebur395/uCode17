@@ -1,5 +1,5 @@
 angular.module('machinLenin')
 
-    .controller('filtersCtrl', ['$scope', '$state', 'videoFilter', function ($scope, $state, videoFilter) {
+    .controller('learningCtrl', ['$scope', '$state', 'videoFilter', function ($scope, $state, videoFilter) {
 
     }]);

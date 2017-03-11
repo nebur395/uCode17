@@ -21,8 +21,29 @@
       <div class="loader"></div>
     </div>
 
-    <div ng-if="thirdView">
-      <h1>procesado</h1>
+    <div ng-if="thirdView" class="text-center">
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Análisis</a></li>
+        <li><a data-toggle="tab" href="#menu1">Filtros</a></li>
+        <li><a data-toggle="tab" href="#menu2">Aprendizaje</a></li>
+      </ul>
+
+
+      <div class="tab-content">
+        <div class="tab-pane fade in active">
+          <h3>Visualiza las analíticas del vídeo</h3>
+          <description></description>
+        </div>
+        <div class="tab-pane fade">
+          <h3>Diviértete mezclando filtros</h3>
+          <filters></filters>
+        </div>
+        <div class="tab-pane fade">
+          <h3>Averigua el estilo del vídeo</h3>
+          <learning></learning>
+        </div>
+      </div>
     </div>
 
   </div>
