@@ -73,6 +73,8 @@ angular.module('machinLenin')
         ];
 
         $scope.searchJSON= function(){
+            $scope.success = true;
+            $scope.imgName = "analytics";
             var searchValue = $scope.frameFilter;
             var arrayJson = $scope.analytics;
             for (var i=0 ; i < arrayJson.length ; i++)
@@ -84,29 +86,29 @@ angular.module('machinLenin')
                                 if(ps == 'age'){
                                     if(arrayJson[i].persons[p].age.max == searchValue){
                                         $scope.result = arrayJson[i];
-                                        $scope.imgName = $scope.imgName + i;
+                                        $scope.imgName = "analytics" + i;
                                     }else if(arrayJson[i].persons[p].age.min == searchValue){
                                         $scope.result = arrayJson[i];
-                                        $scope.imgName = $scope.imgName + i;
+                                        $scope.imgName = "analytics" + i;
                                     }else if(arrayJson[i].persons[p].age.score == searchValue){
                                         $scope.result = arrayJson[i];
-                                        $scope.imgName = $scope.imgName + i;
+                                        $scope.imgName = "analytics" + i;
                                     }
                                 }
                                 else if(ps == 'face'){
                                     if(arrayJson[i].persons[p].face == searchValue){
                                         $scope.result = arrayJson[i];
-                                        $scope.imgName = $scope.imgName + i;
+                                        $scope.imgName = "analytics" + i;
                                     }
                                 }
                                 else if(ps == 'gender'){
                                     if(arrayJson[i].persons[p].gender.gender == searchValue){
                                         $scope.result = arrayJson[i];
-                                        $scope.imgName = $scope.imgName + i;
+                                        $scope.imgName = "analytics" + i;
                                     }
                                     else if(arrayJson[i].persons[p].gender.score == searchValue){
                                         $scope.result = arrayJson[i];
-                                        $scope.imgName = $scope.imgName + i;
+                                        $scope.imgName = "analytics" + i;
                                     }
                                 }
                             }
@@ -116,18 +118,20 @@ angular.module('machinLenin')
                         for(var th = 0; th < arrayJson[i].things.length; th++){
                             if(arrayJson[i].things[th].type == searchValue){
                                 $scope.result = arrayJson[i];
-                                $scope.imgName = $scope.imgName + i;
+                                $scope.imgName = "analytics" + i;
                             }
                             else if(arrayJson[i].things[th].score == searchValue){
                                 $scope.result = arrayJson[i];
-                                $scope.imgName = $scope.imgName + i;
+                                $scope.imgName = "analytics" + i;
                             }
                         }
 
                     }
                 }
             }
-            $scope.success = false;
+            if ($scope.imgName == "analytics"){
+                $scope.success = false;    
+            }
         }
 
     }]);
