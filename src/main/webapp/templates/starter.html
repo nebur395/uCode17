@@ -6,12 +6,9 @@
 
     <div ng-if="firstView">
 
-      <div id="outer">
-        <div id="customContainer">
-          <button class="w3-btn w3-tag w3-theme-action" id="processButton" ng-click="startProcess()">
-            Procesar vídeo</button>
-
-        </div>
+      <div class="text-center">
+        <button class="w3-btn w3-tag w3-theme-action" id="processButton" ng-click="startProcess()">
+          Procesar vídeo</button>
       </div>
 
     </div>
@@ -23,23 +20,23 @@
 
     <div ng-if="thirdView" class="text-center">
 
-      <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Análisis</a></li>
-        <li><a data-toggle="tab" href="#menu1">Filtros</a></li>
-        <li><a data-toggle="tab" href="#menu2">Aprendizaje</a></li>
+      <ul class="nav nav-tabs" style="font-size: 110%">
+        <li class="active" style="margin-left: 30%"><a data-toggle="tab" href="#description">Análisis</a></li>
+        <li><a data-toggle="tab" href="#filters">Filtros</a></li>
+        <li><a data-toggle="tab" href="#learning">Aprendizaje</a></li>
       </ul>
 
 
       <div class="tab-content">
-        <div class="tab-pane fade in active">
+        <div id="description" class="tab-pane fade in active">
           <h3>Visualiza las analíticas del vídeo</h3>
           <description></description>
         </div>
-        <div class="tab-pane fade">
+        <div id="filters" class="tab-pane fade">
           <h3>Diviértete mezclando filtros</h3>
           <filters></filters>
         </div>
-        <div class="tab-pane fade">
+        <div id="learning" class="tab-pane fade">
           <h3>Averigua el estilo del vídeo</h3>
           <learning></learning>
         </div>
