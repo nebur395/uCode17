@@ -32,7 +32,8 @@ with JacksonJsonSupport{
             case videoName:String => {
                 contentType = "video/x-msvideo"
                 val full_name = videoName+".avi"
-                Ok(new File(VIDEO_PATH+full_name),  Map(
+                val file = new File(VIDEO_PATH+full_name)
+                Ok(file,  Map(
                     "Content-Disposition" -> ("attachment; filename=\"" + full_name + "\"")))
             }
             case null => {
