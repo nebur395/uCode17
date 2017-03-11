@@ -43,7 +43,6 @@ footer {
   position: absolute;
   width: 100%;
   height: 70px;
-  font-size: 60%;
 }
 
 footer a {
@@ -59,4 +58,12 @@ footer a:hover {
   text-decoration: line-through;
   cursor: not-allowed !important;
   color: #808080;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+.mL-text-small {
+  font-size: 60%;
 }
