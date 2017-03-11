@@ -78,7 +78,7 @@ angular.module('machinLenin')
             for (var i=0 ; i < arrayJson.length ; i++)
             {
                 for (var k in arrayJson[i]){
-                    if(k=='personas'){
+                    if(k=='persons'){
                         for(var p = 0; p < arrayJson[i].personas.length; p++){
                             for(var ps in arrayJson[i].personas[p]){
                                 if(ps == 'age'){
@@ -93,7 +93,7 @@ angular.module('machinLenin')
                                         $scope.imgName = $scope.imgName + i;
                                     }
                                 }
-                                else if(ps == 'face_connotation'){
+                                else if(ps == 'face'){
                                     if(arrayJson[i].personas[p].face_connotation == searchValue){
                                         $scope.result = arrayJson[i];
                                         $scope.imgName = $scope.imgName + i;
