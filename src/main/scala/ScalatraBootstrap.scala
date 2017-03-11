@@ -7,6 +7,6 @@ class ScalatraBootstrap extends LifeCycle {
     def logger = Logger[ScalatraBootstrap]
 
     override def init(context: ServletContext) {
-        context.mount(new VideoServlet, "/*")
+        context mount(new VideoServlet, "/*")
     }
 }
