@@ -24,5 +24,16 @@ with FileUploadSupport{
 
     configureMultipartHandling(MultipartConfig(maxFileSize = Some(FILE_SIZE)))
 
-    post("/apply"){}
+    post("/apply"){
+        fileParams.get("file") match {
+            case Some(file) =>
+                Ok(file.get(), Map(
+                 "Content-Type"        -> (file.contentType.getOrElse("application/octet-stream")),
+                 "Content-Disposition" -> ("attachment; filename=\"" + file.name + "\"")
+                ))
+
+            case None =>
+                BadRequest("Bad")
+         }
+    }
 }
