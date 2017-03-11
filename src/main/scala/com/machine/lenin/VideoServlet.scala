@@ -7,10 +7,12 @@ import org.json4s.jackson.JsonMethods._
 import org.json4s.JsonAST._
 import org.json4s._
 import org.scalatra.json._
+import org.scalatra.servlet.{FileUploadSupport, MultipartConfig, SizeConstraintExceededException}
 
 class VideoServlet
 extends MlStack
-with JacksonJsonSupport {
+with JacksonJsonSupport
+with FileUploadSupport{
 
     protected implicit val jsonFormats: Formats = DefaultFormats
 
@@ -18,14 +20,9 @@ with JacksonJsonSupport {
     def headers = Map[String,String]("Content-Type" -> "text/plain")
     def logger = Logger[VideoServlet]
     val INTERNAL_ERROR_MESSAGE = "Oops so awkward, something went wrong"
+    val FILE_SIZE = 1024*1024*1024;
 
-    get("/"){
-        <html>
-          <body>
-            <h1>Hello, world!</h1>
-            Say <a href="hello-scalate">hello to Scalate</a>.
-          </body>
-        </html>
-    }
+    configureMultipartHandling(MultipartConfig(maxFileSize = Some(FILE_SIZE)))
+
     post("/apply"){}
 }
