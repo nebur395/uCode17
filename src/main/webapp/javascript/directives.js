@@ -21,11 +21,11 @@ angular.module('machinLenin')
     })
 
     //include the 'cloth.html' into the <cloth> tag
-    .directive('learning', function () {
+    .directive('search', function () {
         return {
             restrict: 'E',
-            templateUrl: 'templates/components/learning.html',
-            controller: 'learningCtrl',
+            templateUrl: 'templates/components/search.html',
+            controller: 'searchCtrl',
             scope: {}
         }
     });
