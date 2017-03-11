@@ -4,8 +4,8 @@ angular.module('machinLenin')
     .factory('videoFilter', function ($state, $http) {
 
         return {
-            // add a exercise to the list of performed exercises
-            sendFilters: function (callback) {
+            // start a video processing
+            startProcess: function (callback) {
                 $http({
                     method: 'POST',
                     url: 'processVideo',
