@@ -2,9 +2,9 @@ angular.module('machinLenin')
 
     .controller('starterCtrl', ['$scope', '$state', 'videoFilter', function ($scope, $state, videoFilter) {
 
-        $scope.firstView = false;
+        $scope.firstView = true;
         $scope.secondView = false;
-        $scope.thirdView = true;
+        $scope.thirdView = false;
 
         $scope.processing = function () {
             $scope.firstView = false;
@@ -25,7 +25,7 @@ angular.module('machinLenin')
         };
 
         $scope.startProcess = function () {
-            videoFilter.startProcess();
+            videoFilter.startProcess($scope.processed);
             $scope.processing();
         };
 
