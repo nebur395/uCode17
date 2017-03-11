@@ -45,15 +45,6 @@ footer {
   height: 70px;
 }
 
-footer a {
-  color: #f5f5f5;
-}
-
-footer a:hover {
-  color: #777;
-  text-decoration: none;
-}
-
 .customDisabled {
   text-decoration: line-through;
   cursor: not-allowed !important;
