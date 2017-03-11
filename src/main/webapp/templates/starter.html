@@ -49,13 +49,22 @@
     <div class="col-sm-6" style="padding:5%">
         <div class="mL-card text-center">
 
+          <!-- FIRST VIEW SECTION -->
+          <div ng-if="firstView">
+            <button class="w3-btn w3-tag w3-theme-action"
+                    id="sendFilters" ng-click="sendFilters()">Aplicar filtros</button>
 
-          <button class="w3-btn w3-tag w3-theme-action"
-                  id="sendFilters" ng-click="sendFilters()">Aplicar filtros</button>
+            <p class="mL-text-small" style="margin-bottom: 0">¿Quieres ver los resultados más rápido?</p>
+            <p class="mL-text-small" style="margin-bottom: 0">Prueba nuestra versión <a href="" class="w3-link">PRO</a></p>
+            </br>
+          </div><!-- END: FIRST VIEW SECTION -->
 
-          <p class="mL-text-small" style="margin-bottom: 0">¿Quieres ver los resultados más rápido?</p>
-          <p class="mL-text-small" style="margin-bottom: 0">Prueba nuestra versión <a href="" class="w3-link">PRO</a></p>
-          </br>
+
+          <div ng-if="secondView">
+            <p>Por favor, espera mientras procesamos el vídeo...</p>
+            <div class="loader"></div>
+          </div>
+
 
         </div>
     </div><!-- END: variable section -->
