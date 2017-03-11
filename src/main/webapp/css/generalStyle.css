@@ -1,10 +1,11 @@
-body {
+html, body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #f1f1f1;
   font-family: 'Noto Sans', sans-serif;
+  height: 100% !important;
 }
 
 /* remove the underline link style */
