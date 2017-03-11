@@ -7,7 +7,7 @@
 2. Install Scalatra following the instructions given in the [official webpage](http://scalatra.org/getting-started/installation.html).
 3. Clone this repository:
 ```sh
-$ git clone https://github.com/UNIZAR-30226-2016-02/cloudrobe
+$ git clone https://github.com/nebur395/uCode17
 ```
 
 ## Build & Run ##
@@ -16,7 +16,7 @@ When you type `./sbt` an interpreter will open where you will type `jetty:start`
 To sum up:
 
 ```sh
-$ cd cloudrobe
+$ cd uCode17
 $ ./sbt
 > jetty:start
 ```
@@ -27,7 +27,7 @@ Then access [http://localhost:8080/](http://localhost:8080/) in your browser.
 SBT allows you to run the tests defined on *src/test*:
 
 ```sh
-$ git clone https://github.com/UNIZAR-30226-2016-02/cloudrobe
+$ git clone https://github.com/nebur395/uCode17
 $ cd cloudrobe
 $ ./sbt
 > test
@@ -38,7 +38,7 @@ $ ./sbt
 SBT to check the dependencies again. If any dependency is not updated, it will
 automatically download the correct version.
 
-## EditorConfig
+# EditorConfig
 [EditorConfig](http://editorconfig.org/) helps developers maintain consistent coding styles between different editors and IDEs. It is a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles.
 You need to create a .editorconfig file in which you define the coding style rules. It is similar to the format accepted by gitignore.
 

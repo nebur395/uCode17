@@ -20,4 +20,7 @@
 .w3-hover-theme:hover {color:#fff !important; background-color:#9aae04 !important}
 .w3-hover-text-theme {color:#9aae04 !important}
 .w3-hover-border-theme:hover {border-color:#9aae04 !important}
-.sC-theme-action:hover {color:#fff !important; background-color:#6c7a02 !important}
+.w3-theme-action:hover {color:#fff !important; background-color:#6c7a02 !important}
+
+.w3-link {color:#2196F3 !important}
+.w3-link:hover {color:#3f51b5 !important;cursor:pointer}
