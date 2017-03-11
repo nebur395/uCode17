@@ -8,8 +8,8 @@ angular.module('machinLenin')
         $scope.whiteBlack = false;
 
         // VIEW MANAGEMENT
-        $scope.firstView = false;
-        $scope.secondView = true;
+        $scope.firstView = true;
+        $scope.secondView = false;
         $scope.thirdView = false;
 
         $scope.sendFilters = function () {

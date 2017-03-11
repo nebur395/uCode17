@@ -1,4 +1,4 @@
-angular.module('machinLenin', ['ui.router'])
+angular.module('machinLenin', ['ui.router', 'ngDroplet'])
 
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
