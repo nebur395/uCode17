@@ -5,6 +5,7 @@ angular.module('machinLenin')
         $scope.characteristic_2 = "";
         $scope.characteristic_3 = "";
         $scope.index = 0;
+        $scope.path = '../../images/analytics1.png'
 
         $scope.getTheme = function(){
             var jsonArray = $scope.analytics;
@@ -96,7 +97,12 @@ angular.module('machinLenin')
         ];
         $scope.getTheme();
 
+        /* Ojo con esta funcion, Angular no hace el módulo de números negativos
+         por eso neesita de comrobación. */
         $scope.plusSlides = function (n) {
-           $scope.index = (slideIndex + n)%3;
-        };
+           $scope.index  += n;
+           if ($scope.index < 0) $scope.index = 2;
+           else $scope.index = $scope.index %3;
+           $scope.path = '../../images/analytics' + ($scope.index+1) + '.png'
+       };
     }]);

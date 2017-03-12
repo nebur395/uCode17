@@ -1,12 +1,14 @@
 <div id="descriptionStyle">
   <p class="text-center">Los contenidos principales del vídeo son: {{characteristic_1}}, {{characteristic_2}} y {{characteristic_3}}. </p>
 
-  <a ng-click="plusSlides(-1)" class="previous">&laquo; Anterior</a>
-  <a ng-click="plusSlides(1)" class="next">Siguiente &raquo;</a>
+  <div class="row" style="margin-bottom:1%">
+    <a ng-click="plusSlides(-1)" style="cursor:pointer" class="w3-theme-l3 w3-btn w3-tag ">&laquo; Anterior</a>
+    <a ng-click="plusSlides(1)" style="cursor:pointer" class="w3-theme-action w3-btn w3-tag ">Siguiente &raquo;</a>
+  </div>
 
   <!-- photo section -->
   <div class="col-sm-6">
-    <img class="img-responsive" src="../../images/analytics1.png" style="margin: auto;"/>
+    <img class="img-responsive" ng-src="{{path}}" style="margin: auto;"/>
   </div><!-- END: photo section -->
 
   <!-- analytics section -->
