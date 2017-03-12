@@ -14,7 +14,8 @@ angular.module('machinLenin')
     .directive('filters', function () {
         return {
             restrict: 'E',
-            templateUrl: 'templates/components/filters.html'
+            templateUrl: 'templates/components/filters.html',
+            scope: {}
         }
     })
 
