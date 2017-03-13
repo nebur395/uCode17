@@ -1,4 +1,6 @@
-# uCode17
+# REC&MAKE | Team Machine Lenin
+
+![](https://github.com/nebur395/uCode17/blob/master/src/main/webapp/images/logo.png)
 
 ## Start using this App ##
  Assuming you have JDK 8 already installed, follow this instructions:
