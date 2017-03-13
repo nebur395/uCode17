@@ -30,7 +30,7 @@ SBT allows you to run the tests defined on *src/test*:
 
 ```sh
 $ git clone https://github.com/nebur395/uCode17
-$ cd cloudrobe
+$ cd uCode17
 $ ./sbt
 > test
 ```
